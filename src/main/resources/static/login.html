@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>நிர்வாக உள்நுழைவு - அகில இந்திய நிதி நிறுவன சங்கம்</title>
+<link rel="icon" type="image/png" href="sangam-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700;800&family=Catamaran:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body class="auth-page">
+	<div class="kolam-bg"></div>
+
+	<div class="card">
+		<div class="logo-circle">
+			<img id="logo" src="sangam-logo.png" alt="logo"
+				style="width: 100px; height: 100px; border-radius: 50%;" />
+		</div>
+		<h1>நிர்வாக உள்நுழைவு</h1>
+		<p class="sub">சங்க நிர்வாகிகள் மட்டும் — உறுப்பினர் பட்டியலை
+			பார்க்க உள்நுழையவும்</p>
+
+		<div class="error-box" id="errorBox"></div>
+
+		<form id="loginForm">
+			<div class="field">
+				<label for="username">பயனர்பெயர்</label> <input type="text"
+					id="username" name="username" placeholder="admin" required
+					oninvalid="this.setCustomValidity('பயனர் பெயரை உள்ளிடவும்')"
+					oninput="this.setCustomValidity('')">
+			</div>
+
+			<div class="field">
+				<label for="password">கடவுச்சொல்</label>
+				<div class="input-wrap">
+					<input type="password" id="password" name="password"
+						placeholder="••••••••" required
+						oninvalid="this.setCustomValidity('கடவுச்சொல்லை உள்ளிடவும்')"
+						oninput="this.setCustomValidity('')">
+					<button type="button" class="toggle-pass" id="togglePass">காட்டு</button>
+				</div>
+			</div>
+
+			<div class="row-between">
+				<!-- <label class="remember"> <input type="checkbox"
+					id="remember" name="remember"> என்னை நினைவில் வை
+				</label> -->
+				<!--  <a href="forgot-password.html" class="forgot-link">கடவுச்சொல்
+					மறந்துவிட்டதா?</a> -->
+			</div>
+
+			<button type="submit" class="submit-btn">உள்நுழையவும்</button>
+		</form>
+
+		<div class="divider">சங்க நிர்வாக குழு மட்டும்</div>
+
+		<p class="signup-line">
+			உறுப்பினராக சேர விரும்புகிறீர்களா? <a href="index.html">இங்கே
+				பதிவு செய்யவும்</a>
+		</p>
+	</div>
+
+	<script src="login.js"></script>
+</body>
+</html>

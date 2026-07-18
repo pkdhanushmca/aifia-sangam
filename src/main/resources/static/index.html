@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>அகில இந்திய நிதி நிறுவன சங்கம் - ஆர்வம் தெரிவிக்க</title>
+<link rel="icon" type="image/png" href="sangam-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700;800&family=Catamaran:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- HERO -->
+	<div class="hero">
+		<a href="login.html" class="admin-link">நிர்வாக உள்நுழைவு →</a>
+		<div class="logo-circle">
+			<img id="logo" src="sangam-logo.png" alt="logo"
+				style="width: 100px; height: 100px; border-radius: 50%" />
+		</div>
+		<div class="eyebrow">புதிய சங்கம்</div>
+		<h1 class="sangam-name">அகில இந்திய நிதி நிறுவன சங்கம்</h1>
+		<p class="tagline">நமது நாட்டின் மக்களை ஒன்றிணைக்கும் ஒரு புதிய
+			முயற்சி — உங்கள் ஆதரவும் ஆர்வமும் இந்த சங்கத்தை வலிமையாக்கும்.</p>
+	</div>
+	<div class="kolam-band dark"></div>
+
+	<!-- PRINCIPLES / KOLGAIGAL -->
+	<div class="principles">
+		<div class="principles-grid">
+			<div class="principle-card">
+				<div class="icon">✦</div>
+				<h3>ஒற்றுமை</h3>
+				<p>அனைவரையும் இணைத்து ஒரு குடும்பமாக செயல்படுதல்</p>
+			</div>
+			<div class="principle-card">
+				<div class="icon">✦</div>
+				<h3>வெளிப்படைத்தன்மை</h3>
+				<p>நிதி மற்றும் நடவடிக்கைகள் அனைத்தும் தெளிவாக பகிரப்படும்</p>
+			</div>
+			<div class="principle-card">
+				<div class="icon">✦</div>
+				<h3>சேவை மனப்பான்மை</h3>
+				<p>ஊர் மற்றும் சமூக நலனுக்காக இயங்கும் அமைப்பு</p>
+			</div>
+			<div class="principle-card">
+				<div class="icon">✦</div>
+				<h3>அனைவருக்கும் இடம்</h3>
+				<p>வயது, தொழில் பேதமின்றி அனைவரையும் வரவேற்கிறோம்</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- FORM -->
+	<div class="form-wrap">
+		<div class="form-card">
+			<h2 class="form-title">உங்கள் விவரங்களை பதிவு செய்யவும்</h2>
+			<p class="form-sub">
+				சங்கத்தில் இணைய விருப்பமுள்ளவர்கள் கீழே உள்ள விவரங்களை முழுமையாக
+				நிரப்பி உறுப்பினர் விண்ணப்பத்தைச் சமர்ப்பிக்கவும். <br>
+				<em><small>உங்கள் தகவல்கள் சங்க உறுப்பினர் பதவிக்காக
+						மட்டுமே பயன்படுத்தப்படும்.</small></em>
+			</p>
+
+			<form id="sangamForm">
+				<div class="field">
+					<label for="fullName">முழு பெயர் <span class="hint">(கட்டாயம்)</span></label>
+					<input type="text" id="fullName" name="fullName"
+						placeholder="உங்கள் பெயர்">
+					<div class="field-error" id="fullNameError">பெயரை உள்ளிடவும்.</div>
+				</div>
+
+				<div class="row-2">
+					<div class="field">
+						<label for="age">வயது</label> <input type="number" id="age"
+							name="age" min="1" max="120" placeholder="எ.கா. 28">
+					</div>
+					<div class="field">
+						<label for="mobile">கைபேசி எண் <span class="hint">(கட்டாயம்)</span></label>
+						<input type="tel" id="mobile" name="mobile"
+							placeholder="10 இலக்க எண்" maxlength="10">
+						<div class="field-error" id="mobileError">சரியான 10 இலக்க
+							கைபேசி எண் உள்ளிடவும்.</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<label for="area">ஊர் / பகுதி</label> <input type="text" id="area"
+						name="area" placeholder="வசிக்கும் ஊர் அல்லது பகுதி">
+				</div>
+
+				<div class="field">
+					<label for="occupation">தொழில் / பணி</label> <input type="text"
+						id="occupation" name="occupation"
+						placeholder="எ.கா. ஆசிரியர், வியாபாரி, மாணவர்">
+				</div>
+
+				<div class="field">
+					<label for="interest">சங்கத்தில் எந்த பணியில் ஆர்வம்
+						உள்ளது? <span class="hint">(விருப்பம்)</span>
+					</label> <select id="interest" name="interest">
+						<option value="">-- தேர்ந்தெடுக்கவும் --</option>
+						<option value="events">நிகழ்ச்சிகள் / விழாக்கள் ஏற்பாடு</option>
+						<option value="finance">நிதி மேலாண்மை</option>
+						<option value="social">சமூக சேவை</option>
+						<option value="media">ஊடகம் / பிரசாரம்</option>
+						<option value="member">வெறும் உறுப்பினராக மட்டும்</option>
+					</select>
+				</div>
+
+				<div class="field">
+					<label for="message">கூடுதல் கருத்து <span class="hint">(விருப்பம்)</span></label>
+					<textarea id="message" name="message"
+						placeholder="உங்கள் ஆலோசனை அல்லது கருத்தை பகிரவும்"></textarea>
+				</div>
+
+				<div class="checkbox-line">
+					<input type="checkbox" id="agree" name="agree"> <label
+						for="agree" style="margin: 0; font-weight: 400;">சங்கத்தின்
+						நோக்கங்களையும் கொள்கைகளையும் ஏற்கிறேன்.</label>
+				</div>
+
+				<button type="submit" class="submit-btn">விவரங்களை
+					சமர்ப்பிக்கவும்</button>
+
+				<div class="success-box" id="successBox">நன்றி! உங்கள்
+					விவரங்கள் பதிவு செய்யப்பட்டது. விரைவில் தொடர்பு கொள்வோம். 🙏</div>
+
+				<div class="success-box" id="errorBox"
+					style="background: rgba(139, 46, 60, 0.10); border-color: var(--kumkum); color: var(--kumkum-dark);">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="kolam-band"></div>
+	<footer>© அகில இந்திய நிதி நிறுவன சங்கம் · ஒற்றுமை • வளர்ச்சி
+		• நம்பிக்கை</footer>
+
+	<script src="index.js"></script>
+</body>
+</html>

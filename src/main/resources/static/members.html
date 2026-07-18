@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>உறுப்பினர் பட்டியல் - அகில இந்திய நிதி நிறுவன சங்கம்</title>
+<link rel="icon" type="image/png" href="sangam-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700;800&family=Catamaran:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="topbar-inner">
+			<div class="brand">
+				<div class="logo-circle">
+					<img id="logo" src="sangam-logo.png" alt="logo"
+						style="width: 52px; height: 52px; border-radius: 50%" />
+				</div>
+				<div>
+					<h1>உறுப்பினர் பட்டியல்</h1>
+					<p>சங்கத்தில் பதிவு செய்தவர்களின் விவரங்கள்</p>
+				</div>
+			</div>
+			<div style="display: flex; align-items: center; gap: 12px;">
+				<div class="count-pill">
+					மொத்தம்: <strong id="totalCount">0</strong> பேர்
+				</div>
+				<button id="logoutBtn"
+					style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.25); color: var(--paper); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">வெளியேறு</button>
+			</div>
+		</div>
+	</div>
+	<div class="kolam-band"></div>
+
+	<div class="container">
+
+		<!-- FILTER BAR -->
+		<div class="filter-bar">
+			<div class="filter-field" style="flex: 2;">
+				<label for="searchInput">பெயர் / கைபேசி / ஊர் தேடவும்</label> <input
+					type="text" id="searchInput" placeholder="தேடல்...">
+			</div>
+			<div class="filter-field">
+				<label for="interestFilter">ஆர்வம்</label> <select
+					id="interestFilter">
+					<option value="">அனைத்தும்</option>
+					<option value="events">நிகழ்ச்சிகள்</option>
+					<option value="finance">நிதி மேலாண்மை</option>
+					<option value="social">சமூக சேவை</option>
+					<option value="media">ஊடகம்</option>
+					<option value="member">உறுப்பினர் மட்டும்</option>
+				</select>
+			</div>
+			<div class="filter-field">
+				<label for="areaFilter">ஊர் / பகுதி</label> <input type="text"
+					id="areaFilter" placeholder="எ.கா. Tambaram">
+			</div>
+			<button class="clear-btn" id="clearBtn">Filter அழிக்கவும்</button>
+		</div>
+
+		<!-- TABLE -->
+		<div class="table-card">
+			<div id="loadingMsg" class="loading">தகவல்கள் ஏற்றப்படுகிறது...</div>
+			<div id="errorMsg" class="error-msg" style="display: none;"></div>
+
+			<div class="table-scroll" id="tableWrap" style="display: none;">
+				<table>
+					<thead>
+						<tr>
+							<th data-key="fullName">பெயர் <span class="arrow">↕</span></th>
+							<th data-key="age">வயது <span class="arrow">↕</span></th>
+							<th data-key="mobile">கைபேசி <span class="arrow">↕</span></th>
+							<th data-key="area">ஊர் <span class="arrow">↕</span></th>
+							<th data-key="occupation">தொழில் <span class="arrow">↕</span></th>
+							<th data-key="interest">ஆர்வம் <span class="arrow">↕</span></th>
+							<th data-key="submittedAt">பதிவு தேதி <span class="arrow">↕</span></th>
+						</tr>
+					</thead>
+					<tbody id="tableBody"></tbody>
+				</table>
+			</div>
+
+			<div class="empty-state" id="emptyState" style="display: none;">தேடலுக்கு
+				பொருந்தும் உறுப்பினர்கள் இல்லை.</div>
+
+			<div class="pagination" id="paginationWrap" style="display: none;">
+				<div class="page-info" id="pageInfo"></div>
+				<div class="page-controls" id="pageControls"></div>
+				<div class="page-size">
+					<span>Rows:</span> <select id="pageSizeSelect">
+						<option value="5">5</option>
+						<option value="10" selected>10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="members.js"></script>
+
+</body>
+</html>

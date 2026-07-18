@@ -1,0 +1,44 @@
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+### Eclipse ###
+bin/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### Java ###
+*.class
+*.log
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Environment Files ###
+.env
+.env.*
+
+### Application Secrets ###
+application-local.properties
+application-local.yml
+
+### Logs ###
+logs/
+*.log
